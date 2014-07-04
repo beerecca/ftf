@@ -1,0 +1,182 @@
+{
+	"uploads": [{
+		"firstname": "Rebecca",
+		"lastname": "Hill",
+		"email": "beerecca+1@gmail.com",
+		"title": "Cool Design Name 1",
+		"description": "This is my first uploaded design.",
+		"prize": true,
+		"tacks": "6",
+		"comments": [
+		{
+			"body": "This design is brilliant!",
+			"author": "Bob"
+		},
+		{
+			"body": "This design is cool!",
+			"author": "Betty"
+		}
+		],
+		"image": "assets/img/sketch1.jpg" 
+		},
+		{
+		"firstname": "Logan",
+		"lastname": "Devitt",
+		"email": "beerecca+2@gmail.com",
+		"title": "Cool Design Name 2",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch2.jpg" 
+		},
+		{
+		"firstname": "Rachel",
+		"lastname": "Woods",
+		"email": "beerecca+3@gmail.com",
+		"title": "Cool Design Name 3",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch3.jpg" 
+		},
+		{
+		"firstname": "Simon",
+		"lastname": "Walker",
+		"email": "beerecca+4@gmail.com",
+		"title": "Cool Design Name 4",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch4.jpg" 
+		},
+		{
+		"firstname": "Rob",
+		"lastname": "Smith",
+		"email": "beerecca+5@gmail.com",
+		"title": "Cool Design Name 5",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch5.jpg" 
+		},
+		{
+		"firstname": "Bevan",
+		"lastname": "Shark",
+		"email": "beerecca+6@gmail.com",
+		"title": "Cool Design Name 6",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch6.jpg" 
+		},
+		{
+		"firstname": "Bobby",
+		"lastname": "Pinter",
+		"email": "beerecca+7@gmail.com",
+		"title": "Cool Design Name 7",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch7.jpg" 
+		},
+		{
+		"firstname": "Sarah",
+		"lastname": "Halson",
+		"email": "beerecca+8@gmail.com",
+		"title": "Cool Design Name 8",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch8.jpg" 
+		},
+		{
+		"firstname": "Mandy",
+		"lastname": "Poplar",
+		"email": "beerecca+9@gmail.com",
+		"title": "Cool Design Name 9",
+		"description": "My design is awesome.",
+		"prize": false,
+		"tacks": "3",
+		"comments": [
+		{
+			"body": "This design is awesome!",
+			"author": "Bill"
+		},
+		{
+			"body": "This design is wicked!",
+			"author": "Bridget"
+		}
+		],
+		"image": "assets/img/sketch9.jpg" 
+		}]
+}

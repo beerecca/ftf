@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'clementepdaelight';
+    src: url('../fonts/clementepdae-light-webfont.eot');
+    src: url('../fonts/clementepdae-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/clementepdae-light-webfont.woff') format('woff'),
+         url('../fonts/clementepdae-light-webfont.ttf') format('truetype'),
+         url('../fonts/clementepdae-light-webfont.svg#clementepdaelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'clementepdairegular';
+    src: url('../fonts/clementepdai-regular-webfont.eot');
+    src: url('../fonts/clementepdai-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/clementepdai-regular-webfont.woff') format('woff'),
+         url('../fonts/clementepdai-regular-webfont.ttf') format('truetype'),
+         url('../fonts/clementepdai-regular-webfont.svg#clementepdairegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'clementepdaksemibold';
+    src: url('../fonts/clementepdak-semibold-webfont.eot');
+    src: url('../fonts/clementepdak-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/clementepdak-semibold-webfont.woff') format('woff'),
+         url('../fonts/clementepdak-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/clementepdak-semibold-webfont.svg#clementepdaksemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $grey;
+    font-family: clementepdairegular;
+    font-size: 1.4rem;
+}
+
+nav a {
+    color: $h-color;
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    font-family: 'clementepdaelight';
+    font-size: 3.6rem;
+    font-weight: 100;
+} 
+
+h2 {
+    font-family: 'clementepdaksemibold';
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-family: 'clementepdaelight';
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+h4 {
+    font-family: 'clementepdairegular';
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-kerning: normal;
+    letter-spacing: 0.1em;
+    font-weight: 100;
+}
+
+aside, .modal-content {
+    color: $h-color;
+    h1,h2,h3,h4 {
+        color: $light-grey;
+    }
+}
+
+aside h4 {
+    margin: 0.75em 0;
+}

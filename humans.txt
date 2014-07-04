@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible:
+Rebecca Hill beerecca.com.
+With thanks to: 
+Buckler, C. (2011, Sep 6). How to Calculate Lighter or Darker Hex Colors in JavaScript. Retrieved from http://www.sitepoint.com/javascript-generate-lighter-darker-color
+Bynens, M., Mari?, C. & Reinl, H. HTML5 Boilerplate [Software]. Available from http://html5boilerplate.com
+Cabello, R. Three.js [Software]. Available from http://threejs.org
+Chamling, S. (2012, Jun). Ajax File Upload with PHP, HTML5 File API and jQuery. Retrieved from http://www.sanwebe.com/2012/06/ajax-file-upload-with-php-and-jquery/comment-page-1
+Firebase [Software]. Available from https://www.firebase.com
+Gallagher, N. Normalize [Software]. Available from http://necolas.github.io/normalize.css/
+Google. Angular.js [Software]. Available from https://angularjs.org/
+Ilic, M. (2013, Aug 28). Transitions for Off-Canvas Navigations. Retrieved from http://tympanus.net/codrops/2013/08/28/transitions-for-off-canvas-navigations/
+J. (2013, Apr 2). Digging into OrbitControls.js. Retrieved from http://fileclosed.blogspot.co.nz/2013/04/digging-into-orbitcontrolsjs.html
+Laviska, C. jQuery Minicolors (A Tiny Color Picker). Retrieved from http://www.abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls
+Modernizr [Software]. Available from http://modernizr.com
+Otto, M. & Thornton, J. (2014, Feb 14). Bootstrap (Version 3.1.1) [Software]. Available from http://getbootstrap.com
+Parisi, T. (2013) 3D Graphics and Rendering in Three.js. In Programming 3D Applications with HTML5 and WebGL. Retrieved from http://chimera.labs.oreilly.com/books/1234000000802/ch04.html#shadows
+Petitcolas, J. (2013, Apr 2). Create a rotating cube in WebGL with Three.js. Retrieved from http://www.jonathan-petitcolas.com/2013/04/02/create-rotating-cube-in-webgl-with-threejs.html
+Prescott, A. Clemente [Font]. Available from http://www.dafont.com/clemente-pd.font
+The jQuery Foundation. jQuery [Software]. Available from http://jquery.com
+Wieser, M. (2013, Mar 27). WebGL 3D model viewer using three.js. Retrieved from http://www.radiatedpixel.com/wordpress/2013/03/27/webgl-3d-model-viewer-using-three-js

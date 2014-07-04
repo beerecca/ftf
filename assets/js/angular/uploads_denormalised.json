@@ -1,0 +1,120 @@
+{
+	"uploads": {
+		"upload1": {
+			"firstname": "Rebecca",
+			"lastname": "Hill",
+			"email": "beerecca+1@gmail.com",
+			"title": "Cool Design Name 1",
+			"description": "This is my first uploaded design.",
+			"prize": true,
+			"tacks": "6",
+			"comments": {
+				"comment1": true
+			},
+			"image": "assets/img/sketch1.jpg" 
+		},
+		"upload2": {
+			"firstname": "Logan",
+			"lastname": "Devitt",
+			"email": "beerecca+2@gmail.com",
+			"title": "Cool Design Name 2",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"comments": {
+				"comment2": true
+			},
+			"image": "assets/img/sketch2.jpg" 
+		},
+		"upload3": {
+			"firstname": "Rachel",
+			"lastname": "Woods",
+			"email": "beerecca+3@gmail.com",
+			"title": "Cool Design Name 3",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"comments": {
+				"comment3": true
+			},
+			"image": "assets/img/sketch3.jpg" 
+		},
+		"upload4": {
+			"firstname": "Simon",
+			"lastname": "Walker",
+			"email": "beerecca+4@gmail.com",
+			"title": "Cool Design Name 4",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"image": "assets/img/sketch4.jpg" 
+		},
+		"upload5": {
+			"firstname": "Rob",
+			"lastname": "Smith",
+			"email": "beerecca+5@gmail.com",
+			"title": "Cool Design Name 5",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"image": "assets/img/sketch5.jpg" 
+		},
+		"upload6": {
+			"firstname": "Bevan",
+			"lastname": "Shark",
+			"email": "beerecca+6@gmail.com",
+			"title": "Cool Design Name 6",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"image": "assets/img/sketch6.jpg" 
+		},
+		"upload7": {
+			"firstname": "Bobby",
+			"lastname": "Pinter",
+			"email": "beerecca+7@gmail.com",
+			"title": "Cool Design Name 7",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"image": "assets/img/sketch7.jpg" 
+		},
+		"upload8": {
+			"firstname": "Sarah",
+			"lastname": "Halson",
+			"email": "beerecca+8@gmail.com",
+			"title": "Cool Design Name 8",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"image": "assets/img/sketch8.jpg" 
+		},
+		"upload9": {
+			"firstname": "Mandy",
+			"lastname": "Poplar",
+			"email": "beerecca+9@gmail.com",
+			"title": "Cool Design Name 9",
+			"description": "My design is awesome.",
+			"prize": false,
+			"tacks": "3",
+			"image": "assets/img/sketch9.jpg" 
+		}
+	},
+	"comments": {
+		"comment1": {
+			"body": "This design is awesome!",
+			"author": "Bill",
+			"upload": "upload1"
+		},
+		"comment2": {
+			"body": "This design is wicked!",
+			"author": "Bridget",
+			"upload": "upload2"
+		},
+		"comment3": {
+			"body": "This design is fabulous!",
+			"author": "Bob",
+			"upload": "upload3"
+		}
+	}
+}	
