@@ -24,7 +24,7 @@
 
 //http://css-tricks.com/snippets/jquery/jquery-sticky-footer
 // Window load event used just in case window height is dependant upon images
-
+/*
 ( function( window ) {
 
 'use strict';
@@ -63,7 +63,7 @@ $(window).bind("load", function() {
 });
 
 })( window );
-
+*/
 
 
 

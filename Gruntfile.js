@@ -19,7 +19,7 @@ grunt.initConfig({
   		  }
   		}
 		},
-    jshint: {
+  jshint: {
       options: {
         jshintrc: '.jshintrc'
       },
@@ -29,7 +29,7 @@ grunt.initConfig({
         'assets/js/angular/*.js'
       ]
     },
-    uglify: {
+  uglify: {
       dist: {
         files: {
           'assets/js/scripts.min.js': [
@@ -45,7 +45,16 @@ grunt.initConfig({
         }
       }
     },
-    watch: {
+  autoprefixer: {
+        options: {
+          browsers: ['last 2 versions', 'ie 9']
+        },
+        single_file: {
+         src: 'assets/css/main.min.css',
+         dest: 'assets/css/main.min.css'
+        }
+    },
+  watch: {
       options: {
       livereload: true,
       },
@@ -53,7 +62,7 @@ grunt.initConfig({
         files: [
           'assets/sass/*.scss',
         ],
-        tasks: ['sass']
+        tasks: ['sass', 'autoprefixer']
       },
       js: {
         files: [
@@ -78,13 +87,15 @@ grunt.initConfig({
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
     'jshint',
     'sass',
-    'uglify'
+    'uglify',
+    'autoprefixer'
   ]);
   grunt.registerTask('dev', [
     'watch'

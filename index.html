@@ -10,10 +10,10 @@
         <link rel="shortcut icon" href="favicon.ico"/>
         <link rel="stylesheet" href="assets/css/main.min.css">
     </head>
-    <body id="body" class="container-fluid home">
+    <body class="wrapper">
         <!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
-        <header class="row">
-            <nav class="col-xs-12">
+        <header class="main-header">
+            <nav class="main-nav">
                 <ul>
                     <li><a href="design.html">Design</a></li>
                     <li><a href="upload.html">Upload</a></li>
@@ -24,24 +24,26 @@
             </nav>
         </header>
 
-        <div class="main row clearfix">
-            <div class="tables col-sm-6 col-md-4">
-                <img src="assets/img/table1.jpg" alt="Table">
-                <img src="assets/img/table2.jpg" alt="Table">
-                <img src="assets/img/table3.jpg" alt="Table">    
+        <main class="main-content">
+            <div class="img-grid">
+                <div class="col-sm-4">
+                    <img src="assets/img/table1.jpg" alt="Table">
+                    <img src="assets/img/table2.jpg" alt="Table">
+                    <img src="assets/img/table3.jpg" alt="Table">    
+                </div>
+                <div class="col-sm-4">
+                    <img src="assets/img/chair1.jpg" alt="Chair">
+                    <img src="assets/img/chair3.jpg" alt="Chair">    
+                </div>
+                <div class="col-sm-4">
+                    <img src="assets/img/bookshelf1.jpg" alt="Bookshelf">
+                    <img src="assets/img/bookshelf3.jpg" alt="Bookshelf">    
+                </div>
             </div>
-            <div class="chairs col-sm-6 col-md-4">
-                <img src="assets/img/chair1.jpg" alt="Chair">
-                <img src="assets/img/chair3.jpg" alt="Chair">    
-            </div>
-            <div class="bookshelves col-sm-6 col-md-4">
-                <img src="assets/img/bookshelf1.jpg" alt="Bookshelf">
-                <img src="assets/img/bookshelf3.jpg" alt="Bookshelf">    
-            </div>
-        </div>
+        </main>
 
-        <footer class="row clearfix">
-            <div class="col-xs-12"><p>© Rebecca Hill 2014. This site was created for educational purposes only.</p></div>
+        <footer class="main-footer">
+            <p>© Rebecca Hill 2014. This site was created for educational purposes only.</p>
         </footer>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

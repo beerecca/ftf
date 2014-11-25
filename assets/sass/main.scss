@@ -1,10 +1,22 @@
-$h-color: #A9A397;
-$bg-color: #3B3427;
-$brand-color: #FDC500;
+$h-color: #A9A397; //light brown
+$bg-color: #3B3427; //dark brown
+$brand-color: #FDC500; //gold
 $grey: #585858;
 $light-grey: #E7E7E7;
 $cream: #FCF6EB;
-$elements: prize, header, aside-open, aside-open-img, st-pusher, modal-backdrop, st-menu, modal, modal-exit;
+$elements: prize, header, aside-open, aside-open-img, modal-backdrop, st-menu, modal, modal-exit;
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px)  { @content; }
+  }
+}
 
 @import 'normalize';
 @import 'html5boilerplate';
@@ -15,11 +27,36 @@ $elements: prize, header, aside-open, aside-open-img, st-pusher, modal-backdrop,
 @import 'typography';
 
 
-//BASE LAYOUT
+// ==========================================================================
+// LAYOUT RULES
+// ==========================================================================
 
-img {
-    max-width: 100%;
-    height: auto;
+.wrapper {
+  display: flex; //outer flex layout, creates sticky footer
+  min-height: 100vh;
+  flex-direction: column; 
+} 
+
+.main-content {
+  flex: 1;
+  display: flex; //inner flex layout, for full height cols
+  flex-flow: row wrap; 
+}
+
+.st-pusher, .st-container {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap; 
+}
+
+.st-menu {
+  flex: 1;
+}
+
+.modal-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .container {
@@ -30,45 +67,46 @@ body {
   background-color: $cream;
 }
 
+img, #three {
+    max-width: 100%;
+    height: auto;
+} //rh do we need #three here?
 
-//NAVIGATION
-
-nav {
-    background-color: $bg-color;
-    padding: 15px 0;
-    text-align: center;
-    margin-bottom: 10px;
+.feature {
+  text-align: center;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
+.img-grid img {
+  padding: 20px;
 }
 
-nav li {
-    text-align: center;
-    padding: 10px 0px;
+@include breakpoint(small) {
+  .st-content {
+    flex: 1;
+    align-self: flex-start;
+    margin-top: 50px;
+  }
+}
+
+@include breakpoint(medium) {
+  .main-content {
+    padding-top: 130px;
+  }
+  .main-content-with-aside {
+    padding-top: 80px;
+  }
+  .feature img {
+    padding-right: 50px;
+  }
+  .copy {
+    padding-left: 50px;
+  }
 }
 
 
-//HOME
-
-.tables img, .chairs img, .bookshelves img {
-  margin: 20px 0px;
-}
-
-
-//ASIDE MODULE (ON DESIGN AND UPLOAD PAGES)
-
-aside {
-    background-color: $bg-color;
-    padding: 10px;
-    margin-bottom: 20px;
-    max-width: 360px;
-    min-width: 360px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+// ==========================================================================
+// FORMS
+// ==========================================================================
 
 input[type=number] {
   width: 80px;
@@ -76,34 +114,7 @@ input[type=number] {
 
 input[type=file] {
   font-family: clementepdairegular;
-  color: $h-color !important;
-}
-
-input[type=submit], button.buy {
-  background-color: $brand-color;
-  border: 0px;
-  color: $bg-color;
-  text-transform: uppercase;
-  font-family: clementepdairegular;
-  font-size: 1.4rem;
-  padding: 10px;
-  margin: 40px 0;
-}
-
-button.buy {
-  margin: 5px 0;
-  float: right;
-  background-color: $brand-color;
-}
-
-input[type=submit]:active {
-  background-color: $grey;
-  outline: none;
-}
-
-#submit-btn {
-  background-color: $light-grey;
-  text-transform: none;
+  color: $h-color;
 }
 
 label  {
@@ -114,29 +125,12 @@ input, textarea {
   margin: 0.4rem 0;
 }
 
-textarea {
-  width: 203px;
+input[type=text], textarea {
+  width: 100%;
 }
 
 select {
   margin: 0.5rem 0;
-}
-
-
-//DESIGN PAGE
-
-div canvas {
-  float: left;
-}
-
-.design .main .row:first-of-type{
-  background: -moz-linear-gradient(top,  rgba(0,0,0,0.01) 45%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 85%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(45%,rgba(0,0,0,0.01)), color-stop(65%,rgba(0,0,0,0.2)), color-stop(85%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
 .minicolors-theme-default .minicolors-input {
@@ -152,96 +146,19 @@ div canvas {
   padding-left: 0px;
 }
 
-//UPLOADS PAGE
-
-//main content
-.product {
-    padding: 20px;
-}
-
-.uploads img {
-    max-height: 100%;
-    cursor: pointer;
-}
-
-.uploads .upload-thumb {
-  height: 160px;
-  text-align: center;
-  background-color: #fff;
-}
-
-img.prize {
-    width: 30px;
-    position: absolute;
-    left: 30px;
-    z-index: index($elements, prize);
-}
-
-.tacks {
-  color: $brand-color;
-  text-align: right;
-  text-transform: uppercase;
-  padding: 0 20px;
-  background-color: #fff;
-  margin-bottom: 80px;
-
-  p {
-    margin: 0;
-  }
-
-  img {
-  width: 30px;
-  }
-
-  .comment-icon {
-    float: left;
-  }
-}
-
-//aside
-
-.aside-open {
-  position: absolute;
-  z-index: index($elements, aside-open);
-  top: 200px;
-  left: 0;
-  border-style: solid;
-  border-width: 70px 0 70px 40px;
-  border-color: transparent transparent transparent $bg-color;
-  width: 0px;
-  height: 0px;
-  background-color: transparent;
-}
-
-.aside-open img {
-  position: absolute;
-  z-index: index($elements, aside-open-img);
-  left: -40px;
-  top: -20px;
-  width: 20px;
-  max-width: 20px;
-  height: auto;
-}
-
-.aside-open:focus {
-  outline: none;
-}
-
-.uploadpg input[type=text] {
-  width: 203px;
-}
-
 #uploadFormSubmit {
   position: relative;
-  top: 110px;
+  top: 80px;
 }
 
 #file-upload {
   visibility: hidden;
+  height: 0px;
 }
 
-form[name="uploadForm"] {
-  height: 400px;
+form[name="imguploadForm"] {
+  position: relative;
+  top: -70px;
 }
 
 input[value=Upload] {
@@ -256,119 +173,89 @@ form.ng-invalid.ng-dirty {
   border: 0px;
 }
 
-//modal
 
-.hidden {
-  display: none;
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+input[type=submit], button {
+  background-color: $light-grey;
+  border: 0px;
+  color: $bg-color;
+  font-family: clementepdairegular;
+  font-size: 1.4rem;
+  padding: 10px;
 }
 
-.modal-content > div {
-  padding: 20px;
+input[type=submit]:active, button:active {
+  background-color: $grey;
+  outline: none;
 }
 
-.modal, .modal-dialog, .modal-content, .info {
-  height: 100%; //RH need to revisit this
+input.btn-important, .btn-important {
+  margin: 5px 0;
+  float: right;
+  background-color: $brand-color;
+  text-transform: uppercase;
 }
 
-.modal-content {
+.btn-close {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  z-index: index($elements, modal-exit);  
+  border: 0px;
+  border-radius: 50%;
+  background-color: $brand-color;
+  font-size: 22px;
+  color: $bg-color;
+}
 
-  .info {
+
+// ==========================================================================
+// NAVIGATION MODULE
+// ==========================================================================
+
+.main-nav {
     background-color: $bg-color;
-  }
-  
-  button {
-    border: 0px;
-    background-color: $brand-color;
-    border-radius: 50%;
-    position: absolute;
-    right: -15px;
-    top: -15px;
-    z-index: index($elements, modal-exit);
-    height: 30px;
-    width: 30px;
-    font-size: 22px;
-    color: $bg-color;
-  }
-  
-  h4 {
-    margin: 0px;
-  }
-  
-  input[type=text] {
-    width: 100%;
-  }
-  
-  textarea {
-    width: 100%;
-  }
-
-  input[type=submit] {
-    margin: 20px 0;
-  }
-
-  img.prize {
-    width: 40px;
-  }
-
-  .tacks {
-    background-color: $bg-color;
-    margin-bottom: 0px;
-  }
-
-}
-
-
-//ABOUT PAGE
-
-.feature {
-  text-align: center;
-}
-
-.main .content {
-  input[type=text], textarea {
-    width: 100%;
-  }
-}
-
-
-//FOOTER
-
-footer {
+    padding: 15px;
     text-align: center;
-    background-color: $bg-color;
-    height: 50px;
-    width: 100%; 
+    margin-bottom: 20px;
 }
 
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+}
 
-/* ==========================================================================
-   MEDIA QUERIES
-   ========================================================================== */
+.main-nav li {
+    text-align: center;
+    padding: 10px 0px;
+}
 
-@media only screen and (min-width: 992px) { //BOOTSTRAP MEDIUM
-
-  nav {
+@include breakpoint(medium) {
+  .main-nav {
     height: 80px;
   }
-
-  nav li {
+  .main-nav li {
     display: inline-block;
     width: 13%;
     padding: 0px;
     margin-top: -20px;
   }
-
   .logo a img {
     margin-top: 20px;
   }
-
   .logo {
     min-width: 355px;
     margin-left: 30px;
     margin-right: 30px;
     position: relative;
   }
-
   .logo:before {
     content: " ";
     position: absolute;
@@ -381,52 +268,158 @@ footer {
     border-width: 100px 170px 0 170px;
     border-color: $bg-color transparent transparent transparent;
   }
-
-  header {
+  .main-header {
     position: fixed;
     width: 100%;
     z-index: index($elements, header);
   }
-  
-  .main {
-    padding-top: 130px;
-  }
-  
-  .about .main, .contact .main {
-    padding-bottom: 50px;
-  }
-  
-  .design .main, .uploadpg .main {
-    padding-top: 80px;
-  }
+}
 
-  .uploads {
-    padding-top: 50px;
-  }
 
-  .modal-content .info {
-    position: relative;
-    left: 2px;
-  }
+// ==========================================================================
+// ASIDE MODULE
+// ==========================================================================
 
-  aside {
+.main-aside {
+    background-color: $bg-color;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+@include breakpoint(small) {
+  .main-aside {
     margin-bottom: 0px;
-  }
-
-  .feature img {
-    padding-right: 50px;
-  }
-
-  .main .content {
-    padding-left: 50px;
   }
 }
 
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+// ==========================================================================
+//  ASIDE ANIMATION MODULE
+// ==========================================================================
+
+.aside-open {
+  position: absolute;
+  z-index: index($elements, aside-open);
+  top: 40%;
+  left: -2px;
+  border-style: solid;
+  border-width: 70px 0 70px 45px;
+  border-color: transparent transparent transparent $bg-color;
+  width: 0px;
+  height: 0px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.aside-open img {
+  position: absolute;
+  z-index: index($elements, aside-open-img);
+  left: -37px;
+  top: -20px;
+  width: 20px;
+  max-width: 20px;
+  height: auto;
+}
+
+.aside-open:focus {
+  outline: none;
+}
+
+.aside-open:active {
+  background-color: transparent;
+}
+
+
+// ==========================================================================
+// THREE MODULE
+// ==========================================================================
+
+div canvas {
+  float: left;
+}
+
+#three {
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.01) 45%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 85%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(45%,rgba(0,0,0,0.01)), color-stop(65%,rgba(0,0,0,0.2)), color-stop(85%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.01) 45%,rgba(0,0,0,0.2) 65%,rgba(0,0,0,0) 85%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+
+// ==========================================================================
+//  UPLOAD GRID MODULE
+// ==========================================================================
+
+.upload {
+  margin-bottom: 80px;
+}
+
+.upload-thumb img, .actions img {
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.upload-thumb {
+  height: 160px;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.prize {
+  width: 30px;
+  position: absolute;
+  left: 30px;
+  z-index: index($elements, prize);
+}
+
+.actions {
+  color: $brand-color;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: #fff;
+  img {width: 30px;}
+  .comments {float: left;}
+}
+
+
+// ==========================================================================
+//  MODAL MODULE
+// ==========================================================================
+
+.modal-content h4 {
+  margin: 0px;
+}
+
+.modal-content > div {
+  padding: 20px;
+}
+
+.upload-info {
+  background-color: $bg-color;
+}
+
+.actions-modal {
+  background-color: $bg-color;
+}
+
+.prize-lg {
+  width: 40px;
+}
+
+
+// ==========================================================================
+//  FOOTER MODULE
+// ==========================================================================
+
+.main-footer {
+    text-align: center;
+    background-color: $bg-color;
+    width: 100%; 
+    padding: 5px;
 }
 

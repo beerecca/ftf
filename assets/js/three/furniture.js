@@ -222,7 +222,7 @@ spotLight = new THREE.SpotLight (0xFCF6EB, 0.5);
         refreshObject();
     });
 
-    $('#neutral').click(function(){
+    $('#remove').click(function(){
         modelIndex = $typeOption.index($typeOption.filter(':checked')); 
         frameIndex = $frameOption.prop("selectedIndex");
         surfaceIndex = $surfaceOption.prop("selectedIndex");
